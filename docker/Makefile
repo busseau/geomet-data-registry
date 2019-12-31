@@ -34,7 +34,7 @@ help:
 	@echo
 
 run:
-	docker run --name $(CONTAINER) -d -i -t -v $(DATA_VOLUME):$(DATA_VOLUME) --hostname $(HOSTNAME) -p 8001:80 -p 9200:9200 -p 6379:6379 $(IMAGE)
+	docker run --name $(CONTAINER) -d -i -t -v $(DATA_VOLUME):$(DATA_VOLUME) --hostname $(HOSTNAME) --env-file=./dev.env $(IMAGE)
 
 build:
 	docker build -t $(IMAGE) .

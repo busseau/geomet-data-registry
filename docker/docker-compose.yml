@@ -27,22 +27,10 @@ services:
       - 6379:6379
 
   geomet-data-registry:
-    container_name: geomet-data-registry
+    container_name: geomet-data-registry-container
     env_file:
-      - dev.env
-    environment:
-      - GDR_LOGGING_LOGLEVEL: "${GDR_LOGGING_LOGLEVEL}"
-      - GDR_LOGGING_LOGFILE: "${GDR_LOGGING_LOGFILE}"
-      - GDR_CONFIG: "${GDR_CONFIG}"
-      - GDR_BASEDIR: "${GDR_BASEDIR}"
-      - GDR_DATADIR: "${GDR_DATADIR}"
-      - GDR_URL: "${GDR_URL}"
-      - GDR_TILEINDEX_TYPE: "${GDR_TILEINDEX_TYPE}"
-      - GDR_TILEINDEX_BASEURL: "${GDR_TILEINDEX_BASEURL}"
-      - GDR_TILEINDEX_NAME: "${GDR_TILEINDEX_NAME}"
-      - GDR_STORE_TYPE: "${GDR_STORE_TYPE}"
-      - GDR_STORE_URL: "${GDR_STORE_URL}"
-      - XDG_CACHE_HOME: "${XDG_CACHE_HOME}"
+      - ./dev.env
     build:
       context: .
-    entrypoint: ['/home/geoadm/start.sh']
+#    entrypoint: /bin/bash
+    tty: true
