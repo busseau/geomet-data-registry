@@ -21,7 +21,7 @@ IMAGE=geomet-data-registry-image
 CONTAINER=geomet-data-registry-container
 HOSTNAME=mandalor
 
-DATA_VOLUME=/data/geomet
+DATA_VOLUME=/tmp
 
 help:
 	@echo
@@ -51,5 +51,6 @@ stop:
 clean:
 	docker rm -f $(CONTAINER)
 	docker rmi $(IMAGE)
+	docker system prune -f
 
 .PHONY: help run build login login-root stop clean

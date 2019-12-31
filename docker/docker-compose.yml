@@ -18,16 +18,31 @@ services:
 #    volumes:
 #      - esdata01:/usr/share/elasticsearch/data
     ports:
-      - 9201:9200
+      - 9200:9200
 
   redis:
     container_name: redis
     image: redis
     ports:
-      - 6380:6379
+      - 6379:6379
 
   geomet-data-registry:
-    container_name: geomet-data-registry-image
+    container_name: geomet-data-registry
+    env_file:
+      - dev.env
+    environment:
+      - GDR_LOGGING_LOGLEVEL: "${GDR_LOGGING_LOGLEVEL}"
+      - GDR_LOGGING_LOGFILE: "${GDR_LOGGING_LOGFILE}"
+      - GDR_CONFIG: "${GDR_CONFIG}"
+      - GDR_BASEDIR: "${GDR_BASEDIR}"
+      - GDR_DATADIR: "${GDR_DATADIR}"
+      - GDR_URL: "${GDR_URL}"
+      - GDR_TILEINDEX_TYPE: "${GDR_TILEINDEX_TYPE}"
+      - GDR_TILEINDEX_BASEURL: "${GDR_TILEINDEX_BASEURL}"
+      - GDR_TILEINDEX_NAME: "${GDR_TILEINDEX_NAME}"
+      - GDR_STORE_TYPE: "${GDR_STORE_TYPE}"
+      - GDR_STORE_URL: "${GDR_STORE_URL}"
+      - XDG_CACHE_HOME: "${XDG_CACHE_HOME}"
     build:
       context: .
-    entrypoint: ['echo', 'hi']
+    entrypoint: ['/home/geoadm/start.sh']
