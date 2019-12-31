@@ -39,6 +39,7 @@ WORKDIR /home/geoadm
 
 # setup geomet-data-registry
 
+RUN echo "hi"
 RUN git clone https://github.com/ECCC-MSC/geomet-data-registry.git -b docker-compose
 WORKDIR geomet-data-registry
 RUN sudo python setup.py install
