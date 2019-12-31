@@ -23,7 +23,7 @@ FROM python:3.6-slim
 
 RUN apt-get update
 
-RUN apt-get install -y gcc git libyaml-dev locales sudo
+RUN apt-get install -y gcc git libyaml-dev locales make sudo
 
 # Set the locale
 RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && locale-gen
@@ -39,11 +39,8 @@ WORKDIR /home/geoadm
 
 # setup geomet-data-registry
 
-RUN echo "hi"
 RUN git clone https://github.com/ECCC-MSC/geomet-data-registry.git -b docker-compose
 WORKDIR geomet-data-registry
 RUN sudo python setup.py install
 RUN find conf/sarracenia -type f -name '*.conf' | xargs sed -i 's#/data/geomet/dev/apps/geomet-data-registry-dev/geomet-data-registry#/home/geoadm/geomet-data-registry/#g'
 WORKDIR ..
-
-COPY dev.env /home/geoadm/dev.env

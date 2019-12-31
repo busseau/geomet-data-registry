@@ -34,3 +34,5 @@ services:
       context: .
 #    entrypoint: /bin/bash
     tty: true
+    volumes:
+      - ..:/home/geoadm/geomet-data-registry
