@@ -1,0 +1,419 @@
+rdwps:
+    model: RDWPS
+    model_run_retention_hours: 48
+    model_run_interval_hours: 6
+    lake:
+        filename_pattern: CMC_rdwps_lake-{lake}_{wx_variable}_latlon0.05x0.05_{YYYYMMDD_model_run}_P{forecast_hour}.grib2
+        variable:
+            HTSGW_SFC_0:
+                members: null
+                elevation: surface
+                model_run:
+                    00Z:
+                        files_expected: 49
+                    06Z:
+                        files_expected: 49
+                    12Z:
+                        files_expected: 49
+                    18Z:
+                        files_expected: 49
+                geomet_layers:
+                    RDWPS.{lake}.SZ_WZ:
+                        forecast_hours: 000/048/PT1H
+                        
+            ICEC_SFC_0:
+                members: null
+                elevation: surface
+                model_run:
+                    00Z:
+                        files_expected: 49
+                    06Z:
+                        files_expected: 49
+                    12Z:
+                        files_expected: 49
+                    18Z:
+                        files_expected: 49
+                geomet_layers:
+                    RDWPS.{lake}.ICEC:
+                         forecast_hours: 000/000/PT0H
+            MZWPER_SFC_0:
+                members: null
+                elevation: surface
+                model_run:
+                    00Z:
+                        files_expected: 49
+                    06Z:
+                        files_expected: 49
+                    12Z:
+                        files_expected: 49
+                    18Z:
+                        files_expected: 49
+                geomet_layers:
+                    RDWPS.{lake}.MWP-CTR:
+                        forecast_hours: 000/048/PT1H
+            PWPER_SFC_0:
+                members: null
+                elevation: surface
+                model_run:
+                    00Z:
+                        files_expected: 49
+                    06Z:
+                        files_expected: 49
+                    12Z:
+                        files_expected: 49
+                    18Z:
+                        files_expected: 49
+                geomet_layers:
+                    RDWPS.{lake}.PPEAK:
+                        forecast_hours: 000/048/PT1H
+            SWDIR_SFC_0:
+                members: null
+                elevation: surface
+                model_run:
+                    00Z:
+                        files_expected: 49
+                    06Z:
+                        files_expected: 49
+                    12Z:
+                        files_expected: 49
+                    18Z:
+                        files_expected: 49
+                geomet_layers:
+                    RDWPS.{lake}.DS:
+                        forecast_hours: 000/048/PT1H
+            SWELL_SFC_0:
+                members: null
+                elevation: surface
+                model_run:
+                    00Z:
+                        files_expected: 49
+                    06Z:
+                        files_expected: 49
+                    12Z:
+                        files_expected: 49
+                    18Z:
+                        files_expected: 49
+                geomet_layers:
+                    RDWPS.{lake}.SZ:
+                        forecast_hours: 000/048/PT1H
+            SWPER_SFC_0:
+                members: null
+                elevation: surface
+                model_run:
+                    00Z:
+                        files_expected: 49
+                    06Z:
+                        files_expected: 49
+                    12Z:
+                        files_expected: 49
+                    18Z:
+                        files_expected: 49
+                geomet_layers:
+                    RDWPS.{lake}.MSP:
+                        forecast_hours: 000/048/PT1H
+            UGRD_TGL_10:
+                members: null
+                elevation: 10m
+                model_run:
+                    00Z:
+                        files_expected: 49
+                    06Z:
+                        files_expected: 49
+                    12Z:
+                        files_expected: 49
+                    18Z:
+                        files_expected: 49
+                geomet_layers:
+                    RDWPS.{lake}.UU:
+                        forecast_hours: 000/048/PT1H
+            VGRD_TGL_10:
+                members: null
+                elevation: 10m
+                model_run:
+                    00Z:
+                        files_expected: 49
+                    06Z:
+                        files_expected: 49
+                    12Z:
+                        files_expected: 49
+                    18Z:
+                        files_expected: 49
+                geomet_layers:
+                    RDWPS.{lake}.UU:
+                        forecast_hours: 000/048/PT1H
+            WVDIR_SFC_0:
+                members: null
+                elevation: surface
+                model_run:
+                    00Z:
+                        files_expected: 49
+                    06Z:
+                        files_expected: 49
+                    12Z:
+                        files_expected: 49
+                    18Z:
+                        files_expected: 49
+                geomet_layers:
+                    RDWPS.{lake}.DE:
+                        forecast_hours: 000/048/PT1H
+            WVHGT_SFC_0:
+                members: null
+                elevation: surface
+                model_run:
+                    00Z:
+                        files_expected: 49
+                    06Z:
+                        files_expected: 49
+                    12Z:
+                        files_expected: 49
+                    18Z:
+                        files_expected: 49
+                geomet_layers:
+                    RDWPS.{lake}.WZ:
+                        forecast_hours: 000/048/PT1H
+            WVPER_SFC_0:
+                members: null
+                elevation: surface
+                model_run:
+                    00Z:
+                        files_expected: 49
+                    06Z:
+                        files_expected: 49
+                    12Z:
+                        files_expected: 49
+                    18Z:
+                        files_expected: 49
+                geomet_layers:
+                    RDWPS.{lake}.MWP:
+                        forecast_hours: 000/048/PT1H
+    gulf:
+        filename_pattern: CMC_rdwps_gulf-st-lawrence_{wx_variable}_latlon0.0090x0.0124_{YYYYMMDD_model_run}_P{forecast_hour}.grib2
+        variable:
+            HTSGW_SFC_0:
+                members: null
+                elevation: surface
+                model_run:
+                    00Z:
+                        files_expected: 17
+                    06Z:
+                        files_expected: 19
+                    12Z:
+                        files_expected: 17
+                    18Z:
+                        files_expected: 19
+                geomet_layers:
+                    RDWPS.GULF.SZ_WZ:
+                        forecast_hours:
+                            00Z: 000/048/PT3H
+                            06Z: 000/054/PT3H
+                            12Z: 000/048/PT3H
+                            18Z: 000/054/PT3H
+            ICEC_SFC_0:
+                members: null
+                elevation: surface
+                model_run:
+                    00Z:
+                        files_expected: 1
+                    06Z:
+                        files_expected: 1
+                    12Z:
+                        files_expected: 1
+                    18Z:
+                        files_expected: 1
+                geomet_layers:
+                    RDWPS.GULF.ICEC:
+                        forecast_hours:
+                            00Z: 000/000/PT0H
+                            06Z: 000/000/PT0H
+                            12Z: 000/000/PT0H
+                            18Z: 000/000/PT0H
+            PKPER_TGL_0:
+                members: null
+                elevation: surface
+                model_run:
+                    00Z:
+                        files_expected: 17
+                    06Z:
+                        files_expected: 19
+                    12Z:
+                        files_expected: 17
+                    18Z:
+                        files_expected: 19
+                geomet_layers:
+                    RDWPS.GULF.PPEAK:
+                        forecast_hours:
+                            00Z: 000/048/PT3H
+                            06Z: 000/054/PT3H
+                            12Z: 000/048/PT3H
+                            18Z: 000/054/PT3H
+            PRMSL_MSL_0:
+                members: null
+                elevation: surface
+                model_run:
+                    00Z:
+                        files_expected: 17
+                    06Z:
+                        files_expected: 19
+                    12Z:
+                        files_expected: 17
+                    18Z:
+                        files_expected: 19
+                geomet_layers:
+                    RDWPS.GULF.PN-SLP:
+                        forecast_hours:
+                            00Z: 000/048/PT3H
+                            06Z: 000/054/PT3H
+                            12Z: 000/048/PT3H
+                            18Z: 000/054/PT3H
+            SWDIR_SFC_0:
+                members: null
+                elevation: surface
+                model_run:
+                    00Z:
+                        files_expected: 17
+                    06Z:
+                        files_expected: 19
+                    12Z:
+                        files_expected: 17
+                    18Z:
+                        files_expected: 19
+                geomet_layers:
+                    RDWPS.GULF.DS:
+                        forecast_hours:
+                            00Z: 000/048/PT3H
+                            06Z: 000/054/PT3H
+                            12Z: 000/048/PT3H
+                            18Z: 000/054/PT3H
+            SWELL_SFC_0:
+                members: null
+                elevation: surface
+                model_run:
+                    00Z:
+                        files_expected: 17
+                    06Z:
+                        files_expected: 19
+                    12Z:
+                        files_expected: 17
+                    18Z:
+                        files_expected: 19
+                geomet_layers:
+                    RDWPS.GULF.SZ:
+                        forecast_hours:
+                            00Z: 000/048/PT3H
+                            06Z: 000/054/PT3H
+                            12Z: 000/048/PT3H
+                            18Z: 000/054/PT3H
+            SWPER_SFC_0:
+                members: null
+                elevation: surface
+                model_run:
+                    00Z:
+                        files_expected: 17
+                    06Z:
+                        files_expected: 19
+                    12Z:
+                        files_expected: 17
+                    18Z:
+                        files_expected: 19
+                geomet_layers:
+                    RDWPS.GULF.MSP:
+                        forecast_hours:
+                            00Z: 000/048/PT3H
+                            06Z: 000/054/PT3H
+                            12Z: 000/048/PT3H
+                            18Z: 000/054/PT3H
+            UGRD_TGL_10:
+                members: null
+                elevation: 10m
+                model_run:
+                    00Z:
+                        files_expected: 17
+                    06Z:
+                        files_expected: 19
+                    12Z:
+                        files_expected: 17
+                    18Z:
+                        files_expected: 19
+                geomet_layers:
+                    RDWPS.GULF.UU:
+                        forecast_hours:
+                            00Z: 000/048/PT3H
+                            06Z: 000/054/PT3H
+                            12Z: 000/048/PT3H
+                            18Z: 000/054/PT3H
+            VGRD_TGL_10:
+                members: null
+                elevation: 10m
+                model_run:
+                    00Z:
+                        files_expected: 17
+                    06Z:
+                        files_expected: 19
+                    12Z:
+                        files_expected: 17
+                    18Z:
+                        files_expected: 19
+                geomet_layers:
+                    RDWPS.GULF.UU:
+                        forecast_hours:
+                            00Z: 000/048/PT3H
+                            06Z: 000/054/PT3H
+                            12Z: 000/048/PT3H
+                            18Z: 000/054/PT3H
+            WVDIR_SFC_0:
+                members: null
+                elevation: surface
+                model_run:
+                    00Z:
+                        files_expected: 17
+                    06Z:
+                        files_expected: 19
+                    12Z:
+                        files_expected: 17
+                    18Z:
+                        files_expected: 19
+                geomet_layers:
+                    RDWPS.GULF.DE:
+                        forecast_hours:
+                            00Z: 000/048/PT3H
+                            06Z: 000/054/PT3H
+                            12Z: 000/048/PT3H
+                            18Z: 000/054/PT3H
+            WVHGT_SFC_0:
+                members: null
+                elevation: surface
+                model_run:
+                    00Z:
+                        files_expected: 17
+                    06Z:
+                        files_expected: 19
+                    12Z:
+                        files_expected: 17
+                    18Z:
+                        files_expected: 19
+                geomet_layers:
+                    RDWPS.GULF.WZ:
+                        forecast_hours:
+                            00Z: 000/048/PT3H
+                            06Z: 000/054/PT3H
+                            12Z: 000/048/PT3H
+                            18Z: 000/054/PT3H
+            WVPER_SFC_0:
+                members: null
+                elevation: surface
+                model_run:
+                    00Z:
+                        files_expected: 17
+                    06Z:
+                        files_expected: 19
+                    12Z:
+                        files_expected: 17
+                    18Z:
+                        files_expected: 19
+                geomet_layers:
+                    RDWPS.GULF.MWP:
+                        forecast_hours:
+                            00Z: 000/048/PT3H
+                            06Z: 000/054/PT3H
+                            12Z: 000/048/PT3H
+                            18Z: 000/054/PT3H
